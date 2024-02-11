@@ -1,0 +1,20 @@
+# fly.toml app configuration file generated for frontend-bikes4all on 2023-11-23T16:09:14+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "frontend-bikes4all"
+primary_region = "otp"
+
+[build]
+  image = "ghcr.io/inginerie-software-2023-2024/proiect-inginerie-software-ando-foro/bikes4all-frontend:latest"
+
+[http_service]
+  internal_port = 80
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+ 
+
